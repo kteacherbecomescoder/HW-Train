@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Train Scheduler</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">Train Schedule</h1>
+      <h3 class="text-center">U of A Coding Bootcamp Train Terminal</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <table class="table table-hover" id="table">
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frequency (Minutes)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              Add Train
+            </h3>
+          </div>
+          <div class="panel-body">
+            <form id="my-form">
+              <div class="form-group">
+                <label for="name">Train Name</label>
+                <input class="form-control" id="name" type="text" placeholder="Hogwarts Express">
+              </div>
+              <div class="form-group">
+                <label for="role">Destination</label>
+                <input class="form-control" id="destination" type="text" placeholder="Hogwarts">
+              </div>
+              <div class="form-group">
+                <label for="start-date">First Train Time (HH:MM Military Time)</label>
+                <input class="form-control" id="first-train" type="text" placeholder="13:20">
+              </div>
+              <div class="form-group">
+                <label for="frequency">Frequency (in Minutes)</label>
+                <input class="form-control" id="frequency" type="number" placeholder="15">
+              </div>
+              <button class="btn btn-primary" id="submit-train" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBt345tanNcpQ0__cJrJ3AdfDcAGc0OKEE",
+      authDomain: "my-first-firebase-projec-b2f6b.firebaseapp.com",
+      databaseURL: "https://my-first-firebase-projec-b2f6b.firebaseio.com",
+      projectId: "my-first-firebase-projec-b2f6b",
+      storageBucket: "my-first-firebase-projec-b2f6b.appspot.com",
+      messagingSenderId: "509071111892"
+    };
+    firebase.initializeApp(config);
+  </script>
+<!-- JavaScript Link-->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
